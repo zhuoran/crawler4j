@@ -1,0 +1,171 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>me.zhuoran.crawler4j</groupId>
+		<artifactId>crawler4j-parent</artifactId>
+		<version>0.1</version>
+	</parent>
+	<artifactId>crawler4j-core</artifactId>
+	<name>${project.artifactId}</name>
+	<description>The core module of the crawler4j</description>
+    <packaging>jar</packaging>
+    
+	<properties>
+	    <skip_maven_deploy>true</skip_maven_deploy>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java-version>1.6</java-version>
+		<org.slf4j-version>1.6.6</org.slf4j-version>
+		<maven-license-plugin.version>1.9.0</maven-license-plugin.version>
+		<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
+		<httpclient-version>4.2.1</httpclient-version>
+		<dom4j-version>1.6.1</dom4j-version>
+		<jsoup-version>1.7.1</jsoup-version>
+		<junit-version>4.1</junit-version>
+	</properties>
+
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${org.slf4j-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpcore</artifactId>
+			<version>${httpclient-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>${httpclient-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>dom4j</groupId>
+			<artifactId>dom4j</artifactId>
+			<version>${dom4j-version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>${jsoup-version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit-version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>com.mycila.maven-license-plugin</groupId>
+				<artifactId>maven-license-plugin</artifactId>
+				<version>${maven-license-plugin.version}</version>
+				<configuration>
+					<basedir>${basedir}</basedir>
+					<header>src/main/resources/etc/header.txt</header>
+					<quiet>false</quiet>
+					<failIfMissing>true</failIfMissing>
+					<aggregate>true</aggregate>
+					<strictCheck>true</strictCheck>
+					<includes>
+						<include>**/src/*/java/**/*.java</include>
+					</includes>
+					<excludes>
+					</excludes>
+					<useDefaultExcludes>true</useDefaultExcludes>
+					<mapping>
+						<java>SLASHSTAR_STYLE</java>
+					</mapping>
+					<useDefaultMapping>true</useDefaultMapping>
+					<properties>
+						<year>2012</year>
+						<author>Zhuoran Wang</author>
+						<email>zoran.wang@gmail.com</email>
+					</properties>
+					<encoding>UTF-8</encoding>
+				</configuration>
+				<executions>
+                <execution>
+                    <goals>
+                        <goal>format</goal>
+                    </goals>
+                </execution>
+            </executions>
+			</plugin>
+		</plugins>
+	</build>
+	
+	 <pluginRepositories>
+        <pluginRepository>
+            <id>m2-release</id>
+            <name>88250 at Google Maven repository of releases</name>
+            <url>http://m2-repos.googlecode.com/svn/release</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </pluginRepository>
+        <pluginRepository>
+            <id>m2-snapshot</id>
+            <name>88250 at Google Maven repository of snapshots</name>
+            <url>http://m2-repos.googlecode.com/svn/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>interval:10</updatePolicy>
+            </snapshots>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </pluginRepository>
+    </pluginRepositories>
+    
+    <licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
+	
+	<issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/zhuoran/crawler4j/issues</url>
+    </issueManagement>
+	
+	<developers>
+		<developer>
+			<name>Zhuoran(Wang)</name>
+			<id>zhuoran</id>
+			<email>zoran.wang(AT)gmail.com</email>
+			<roles>
+				<role>Developer</role>
+			</roles>
+			<timezone>+8</timezone>
+		</developer>
+	</developers>
+    
+
+</project>

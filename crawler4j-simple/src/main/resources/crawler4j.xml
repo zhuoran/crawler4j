@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<target>
+   
+     <site>
+        <charset>UTF-8</charset>
+        <name>Infoq-News</name>
+        <delay>1000</delay>
+        <url><![CDATA[http://www.infoq.com/infoq.action?newsidx=10]]></url>
+        <extract_links_elementId>div.box-content-3</extract_links_elementId>
+        <parser>me.zhuoran.crawler4j.simple.ParserDemo</parser>
+        <crawler>me.zhuoran.crawler4j.simple.InfoqCrawler</crawler>
+    </site>
+    
+</target>
