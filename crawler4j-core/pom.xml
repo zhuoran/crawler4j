@@ -21,7 +21,7 @@
 		<httpclient-version>4.2.1</httpclient-version>
 		<dom4j-version>1.6.1</dom4j-version>
 		<jsoup-version>1.7.1</jsoup-version>
-		<junit-version>4.1</junit-version>
+		<junit-version>4.13.1</junit-version>
 	</properties>
 
 	
