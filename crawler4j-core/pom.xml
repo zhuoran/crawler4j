@@ -20,7 +20,7 @@
 		<maven-compiler-plugin.version>2.3.2</maven-compiler-plugin.version>
 		<httpclient-version>4.2.1</httpclient-version>
 		<dom4j-version>1.6.1</dom4j-version>
-		<jsoup-version>1.7.1</jsoup-version>
+		<jsoup-version>1.15.3</jsoup-version>
 		<junit-version>4.1</junit-version>
 	</properties>
 
